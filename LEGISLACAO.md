@@ -1,4 +1,4 @@
-# Guia de Documentos Oficiais Florenec: Legislação Digital Brasileira
+# Guia de Documentos Oficiais Florence: Legislação Digital Brasileira
 
 
 ## 1. Direitos Autorais
