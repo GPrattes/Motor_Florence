@@ -27,15 +27,15 @@ O **Motor Florence** é um sistema proprietário de auditoria forense digital de
 O Motor Florence foi projetado com uma premissa inegociável: **seu ativo digital nunca sai da sua máquina.**
  
 ```
-┌─────────────────────────────────────────────────────────┐
-│              GARANTIAS DE PRIVACIDADE                   │
-│                                                         │
-│  ✔  Nenhum arquivo é enviado a servidores externos      │
-│  ✔  Nenhuma API de terceiros processa seus dados        │
-│  ✔  Nenhum dado de uso, telemetria ou log é coletado    │
-│  ✔  Funciona em ambientes air-gap (sem internet)        │
-│  ✔  A única saída de rede é a consulta NTP de tempo     |
-└─────────────────────────────────────────────────────────┘
+
+              GARANTIAS DE PRIVACIDADE                   
+                                                         
+  ✔  Nenhum arquivo é enviado a servidores externos      
+  ✔  Nenhuma API de terceiros processa seus dados        
+  ✔  Nenhum dado de uso, telemetria ou log é coletado    
+  ✔  Funciona em ambientes air-gap (sem internet)        
+  ✔  A única saída de rede é a consulta NTP de tempo
+
 ```
  
 ### Por que isso importa juridicamente?
