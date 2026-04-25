@@ -19,11 +19,63 @@
 O **Motor Florence** é um sistema proprietário de auditoria forense digital desenvolvido para proteção e comprovação de propriedade intelectual de ativos digitais no Brasil. Combina criptografia de nível militar, timestamping seguro via NTP e geração de laudos técnico-jurídicos em conformidade com o ordenamento jurídico brasileiro.
 
 > **Acesso ao código-fonte e documentação técnica completa disponíveis exclusivamente mediante licenciamento comercial.**
-
 ---
 
+ 
+## 🛡 Processamento 100% Offline — Zero Dependência de Nuvem
+ 
+O Motor Florence foi projetado com uma premissa inegociável: **seu ativo digital nunca sai da sua máquina.**
+ 
+```
+┌─────────────────────────────────────────────────────────┐
+│              GARANTIAS DE PRIVACIDADE                   │
+│                                                         │
+│  ✔  Nenhum arquivo é enviado a servidores externos      │
+│  ✔  Nenhuma API de terceiros processa seus dados        │
+│  ✔  Nenhum dado de uso, telemetria ou log é coletado    │
+│  ✔  Funciona em ambientes air-gap (sem internet)        │
+│  ✔  A única saída de rede é a consulta NTP de tempo     |
+└─────────────────────────────────────────────────────────┘
+```
+ 
+### Por que isso importa juridicamente?
+ 
+Em disputas de propriedade intelectual, **a cadeia de custódia começa na coleta**. Se o arquivo auditado transitar por um servidor externo — mesmo criptografado — um advogado adverso pode questionar a integridade do processo. Com o Motor Florence, todo o pipeline criptográfico ocorre **exclusivamente em memória local**, eliminando essa vulnerabilidade processual.
+ 
+### Modelo de Segurança
+ 
+| Camada | Abordagem |
+|--------|-----------|
+| **Dados em repouso** | Chave privada isolada com permissão restrita ao titular |
+| **Dados em trânsito** | Não há — nenhum dado do ativo trafega pela rede |
+| **Integridade do bundle** | Merkle Tree + assinatura RSA-4096 detectam qualquer adulteração |
+| **Rastreabilidade** | Cadeia de Guarda encadeada (hash-linked) e auditável |
+| **Temporalidade** | Timestamp NTP verificável e imutável após assinatura |
+| **Superfície de ataque** | Mínima — sem servidor, sem banco de dados, sem dependência remota |
+ 
+### Fluxo de Dados (auditável)
+ 
+```
+[Arquivo Local]
+      │
+      ▼
+[Motor Florence — execução local]
+      │
+      ├──▶ Hash Pipeline (memória) ──▶ [SHA-256 / SHA3-512 / BLAKE2b / ...]
+      │
+      ├──▶ Consulta NTP ────────────▶ [Timestamp assinado] ← única saída de rede
+      │
+      ├──▶ Assinatura RSA-4096 ─────▶ [Bundle de evidências]
+      │
+      └──▶ Empacotamento local ─────▶ [ZIP + Laudo PDF — tudo no seu disco]
+```
+ 
+> **Compatível com ambientes de alta segurança:** escritórios de advocacia, tribunais, órgãos públicos e empresas com políticas de zero-trust podem operar o Motor Florence em redes isoladas, substituindo apenas a consulta NTP por um servidor interno ou timestamp manual homologado.
+ 
+---
+ 
 ## ⚖ Fundamento Jurídico
-
+ 
 | Norma | Aplicação |
 |-------|-----------|
 | Lei nº 9.610/1998 | Lei de Direitos Autorais |
@@ -34,7 +86,7 @@ O **Motor Florence** é um sistema proprietário de auditoria forense digital de
 | CC Art. 212 e 225 | Meios de prova e força probatória |
 | CPC Art. 411 e 422 | Documentos digitais como prova |
 | ABNT ISO/IEC 27037 | Coleta e preservação de evidências digitais |
-
+ 
 ---
 
 ## 🔐 Stack Tecnológica e Competências Aplicadas
