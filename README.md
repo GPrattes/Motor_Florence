@@ -11,7 +11,7 @@
 
 ---
 
-![](assets/Capa_florence.png)
+![](Capa_florence.png)
 ---
 
 ## 📋 Visão Geral
@@ -72,7 +72,7 @@ O **Motor Florence** é um sistema proprietário de auditoria forense digital de
 ---
 ## Demostração do Sistema Florence ##
 
-![](assets/demostração_1.gif)
+![](demostração_1.gif)
 ---
 
 ### Dependências Principais
@@ -136,7 +136,7 @@ Abas disponíveis após processamento: **Hashes · Metadados · Timestamp · Ass
 3. **O laudo não substitui perícia forense** — conforme CPC Art. 473, laudos periciais têm precedência processual.
 4. **Custódia da chave privada** — responsabilidade exclusiva do titular; sua perda inviabiliza a verificação da assinatura.
 ---
-## Documnetos Gerados : [Laudo PDF](assets/Laudo_Florence_TESTE.pdf.md)
+## Documnetos Gerados : [Laudo PDF](Laudo_Florence_TESTE.pdf)
 
 
 
